@@ -1,0 +1,134 @@
+html {
+  --percentage: 314;
+  font-family: Geneva;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  height: 34px;
+  margin: 0;
+  visibility: hidden;
+}
+
+.slider {
+  height: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(223, 229, 238);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(1, 91, 255);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.testik {
+  fill: none;
+  stroke-width: 10px;
+  stroke: rgb(1, 91, 255);
+  stroke-dasharray: 314;
+  stroke-dashoffset: var(--percentage)
+}
+
+.testik1 {
+  fill: none;
+  stroke-width: 10px;
+  stroke: rgb(239, 243, 246);
+}
+
+.svg {
+  transform: rotate(-90deg);
+}
+
+.svg-animate {
+  stroke-dashoffset: 78.5;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: clock-animation 1s linear infinite;
+}
+
+@keyframes clock-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-data {
+  border: 1px solid black;
+  height: 32px;
+  border-radius: 34px;
+  width: 58px;
+  font-size: 20px;
+  text-align: center;
+  padding: 0;
+}
+
+.svg-hide {
+  visibility: hidden;
+}
+
+.progress {
+  display: grid;
+  align-items: center;
+  height: 100vh;
+}
+
+.progress-cell-content {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 50vh;
+}
+
+@media (min-width: 450px) {
+  .progress { 
+    grid-template-columns: repeat(2, 1fr);
+    /* height: 320px; */
+
+  }
+
+  .progress-cell-content {
+    height: 100%;
+  }
+}
+
