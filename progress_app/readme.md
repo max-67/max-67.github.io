@@ -1,4 +1,14 @@
 # Progress App
-"Progress" displays progress as a percentage (0-100) and displays the status.
+"Progress" displays progress as a percentage (0-100) and displays the status.<br>
 Ammosov Maxim (max-67)
-## Project setup
+## Setup
+```
+# install
+npm install or npm i
+
+#build
+npm run build
+
+#run
+npm run start
+```
