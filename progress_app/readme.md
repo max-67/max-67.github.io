@@ -1,6 +1,6 @@
 # Progress App
 "Progress" displays progress as a percentage (0-100) and displays the status.<br>
-Ammosov Maxim (max-67)
+Author: Ammosov Maxim (max-67)
 ## Setup
 ```
 # install
